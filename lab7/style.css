@@ -1,0 +1,45 @@
+.wrapper{
+    width: 50%;
+    margin: 1.5em auto;
+}
+legend{
+    text-align: center;
+}
+fieldset{
+    margin: 10px 0;
+    border:1px solid rgb(208 208 208);
+}
+label:not(:last-child){
+    width: 15%;
+    display: inline-block;
+}
+input[type="text"], textarea, select{
+    width: 70%;
+    border:1px solid rgb(218, 180, 28);
+    outline: 0;
+    font-size: 18px;
+    padding: 5px;
+}
+input[type="radio" i]{
+    width: 20px;
+    height: 20px;
+}
+
+fieldset span{
+    font-size: 21px;
+}
+
+button[type="submit"]{
+    background-color: rgb(34, 41, 171);
+    color: white;
+}
+button[type="reset"]{
+    background-color: rgb(179, 63, 75);
+    color: white;
+}
+button{
+    border: 0;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
