@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 5 elems & events</title>
+</head>
+
+<body>
+    <!-- audo  -->
+    <audio src="https://cdn.freesound.org/previews/672/672711_1648170-lq.mp3" controls autoplay muted loop></audio>
+    <!-- video  -->
+    <video controls width="250">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <!-- figure  -->
+    <figure>
+        <img
+            src="https://images.pexels.com/photos/12528815/pexels-photo-12528815.jpeg?auto=compress&cs=tinysrgb&w=680&h=375&dpr=1" />
+        <figcaption>Home</figcaption>
+    </figure>
+
+    <!-- article tag -->
+    <!-- The <article> HTML element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry, a product card, a user-submitted comment, an interactive widget or gadget, or any other independent item of content. -->
+    <article class="film_review">
+        <h2>Jurassic Park</h2>
+        <section class="main_review">
+            <h3>Review</h3>
+            <p>Dinos were great!</p>
+        </section>
+        <section class="user_reviews">
+            <h3>User reviews</h3>
+            <article class="user_review">
+                <h4>Too scary!</h4>
+                <p>Way too scary for me.</p>
+                <footer>
+                    <p>
+                        Posted on
+                        <time datetime="2015-05-16 19:00">May 16</time>
+                        by Lisa.
+                    </p>
+                </footer>
+            </article>
+        </section>
+    </article>
+
+    <!-- aside  -->
+    <!-- The <aside> HTML element represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes. -->
+    <article>
+        <p>
+            The Disney movie <cite>The Little Mermaid</cite> was first released to
+            theatres in 1989.
+        </p>
+        <aside>
+            <p>The movie earned $87 million during its initial release.</p>
+        </aside>
+        <p>More info about the movie…</p>
+    </article>
+
+    <!-- The <nav> HTML element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes. -->
+        <nav class="crumbs">
+            <ol>
+                <li class="crumb"><a href="#">Bikes</a></li>
+                <li class="crumb"><a href="#">BMX</a></li>
+                <li class="crumb">Jump Bike 3000</li>
+            </ol>
+        </nav>
+
+        <form name="demoForm">
+            <input type="text" name="name" id="">
+            <button type="submit">SUBMIT</button>
+        </form>
+        
+
+        <script>
+            /**
+             * WINDOW EVENTS
+             * 
+             * **/
+            // onload event
+            window.onload = (ev) =>{
+                console.log(ev)
+            }
+            // resize event
+            window.addEventListener("resize", e =>{
+                console.log(e)
+            })
+            // copy event
+            window.addEventListener("copy", e=>{
+                console.log(e.target.innerHTML)
+            })
+            /**
+             * FORM EVENTS
+             * 
+             * **/
+
+            document.demoForm.addEventListener("submit",e=>{
+                e.preventDefault();
+                console.log(e.target[0].value)
+                e.target.submit()
+            })
+
+            // Keyboard events
+            document.addEventListener("keypress", ev=>{
+                ev.preventDefault()
+                console.log(ev.key)
+            })
+
+            //mouse events
+            let prevx,prevy;
+            document.addEventListener("mousemove", ev=>{
+
+                prevx = ev.clientX;
+                prevy =  ev.clientY
+                console.log("Mouse is at=> X:"+ ev.clientX + "Y:" + ev.clientY)
+            })
+
+        </script>
+</body>
+
+</html>
