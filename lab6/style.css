@@ -1,0 +1,15 @@
+.card .card-header, .card-body{
+    border-bottom: 1px solid black;
+}
+.card-body, .card-header, .card-footer{
+    padding: 15px;
+}
+.card-header{
+    text-transform: capitalize;
+    font-size: 23px;
+    font-weight: 600;
+}
+button{
+    padding: 10px 5px;
+    cursor: pointer;
+}
