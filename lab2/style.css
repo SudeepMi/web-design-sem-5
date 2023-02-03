@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    background-color: rgb(184, 135, 231);
+    padding: 1.2em;
+}
+
+nav, ul{
+    display: flex;
+    align-items: center;
+}
+.brand{
+    flex: 1;
+}
+nav ul{
+    list-style: none;
+    gap: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+.hero{
+    padding: 20px;
+    height: 40vh;
+}
+.hero .content{
+    float: left;
+    width: 50%;
+}
+.hero img{
+    object-fit: cover;
+    height: 40vh;
+    width: 100%;
+}
+.clearfix{
+    clear: both;
+}
+nav .active{
+    font-weight: 800;
+    color: rgb(180, 249, 226);
+}
+.contact-info{
+    width: 40%;
+    margin: auto;
+}
+#gallery .content{
+    width: 32%;
+    margin: 0 10px;
+}
+.services{
+    display: flex;
+    gap: 20px;
+}
+.services .item{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
