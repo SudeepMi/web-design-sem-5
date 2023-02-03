@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.header{
+    grid-area: header;
+    background-color: #545486;
+}
+.left{
+    grid-area: left;
+    background-color: #AA5457;
+}
+.right{
+    grid-area: right;
+    background-color: #8878FF;
+}
+.content{
+    grid-area: content;
+    background-color: #00AAFF;
+}
+.menu{
+    grid-area: menu;
+    background-color: #879886;
+}
+.footer{
+    grid-area: footer;
+    background-color: #878787;
+}
+.wrapper{
+    display: grid;
+    height: 100vh;
+    grid-template:
+        "header header header header"
+        "menu menu menu menu"
+        "left content content right"
+        "footer footer footer footer";
+    grid-template-rows: 7vh 7vh 80vh 6vh;
+}
